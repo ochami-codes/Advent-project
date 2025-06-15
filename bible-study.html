@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bible Study | Second Advent Ministries</title>
+  <link rel="stylesheet" href="advent_stylesheet.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    nav ul {
+      list-style: none;
+      background-color: powderblue;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 5px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      border-radius: 20px;
+      padding: 10px 15px;
+      display: inline-block;
+      color: white;
+    }
+
+    nav ul li:nth-child(even) a {
+      background-color: red;
+    }
+
+    nav ul li:nth-child(odd) a {
+      background-color: green;
+    }
+
+    header, section, footer {
+      padding: 20px;
+      text-align: center;
+    }
+
+    ol {
+      list-style: none;
+      padding: 0;
+    }
+
+    ol li {
+      margin: 10px 0;
+    }
+
+    ol li a {
+      text-decoration: none;
+      border-radius: 25px;
+      padding: 8px 15px;
+      display: inline-block;
+      color: white;
+    }
+
+    ol li:nth-child(even) a {
+      background-color: red;
+    }
+
+    ol li:nth-child(odd) a {
+      background-color: green;
+    }
+
+    form {
+      max-width: 100%;
+      width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form label,
+    form input,
+    form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* --- Mobile Responsiveness --- */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li a {
+        width: 100%;
+        text-align: center;
+      }
+
+      header, section, footer {
+        padding: 15px;
+      }
+
+      h1, h2 {
+        font-size: 1.5em;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 16px;
+      }
+
+      nav ul li {
+        margin: 3px 0;
+      }
+
+      ol li a {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="bible-study.html">Bible Study</a></li>
+      <li><a href="health-corner.html">Health Corner</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Bible Study Resources</h1>
+    <p><em>“Thy word is a lamp unto my feet, and a light unto my path.” – Psalm 119:105</em></p>
+  </header>
+
+  <section>
+    <h2>Topical Studies</h2>
+    <ol>
+      <li><a href="redemption .html">The Story of Redemption</a></li>
+      <li><a href="the-law.html">The Law of God</a></li>
+      <li><a href="the-sabbath.html">The Sabbath</a></li>
+      <li><a href="standards.html">The Christian Living and Standards</a></li>
+    </ol>
+  </section>
+
+  <!-- NOTE: Backend submission coming soon. I'm learning how to handle POST requests in Node.js/PHP/etc. 
+  <section>
+    <h2>Request a Bible Study</h2>
+    <p>Have a question about the Bible? Don't worry! Reach us by filling out the form below:</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="emapho">Email/Phone:</label>
+      <input type="text" id="emapho" name="emapho" required />
+
+      <label for="question">Write Us Your Question:</label>
+      <textarea id="question" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>-->
+
+  <footer>
+    <p>&copy; 2025 Second Advent Ministries | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

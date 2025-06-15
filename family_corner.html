@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family Life Corner | Second Advent Ministries</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fffaf5;
+      color: #333;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #f6ebe3;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+    }
+
+    header img.logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      color: #7b3f00;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle, header p {
+      font-style: italic;
+      color: #a0522d;
+      margin-top: 0;
+    }
+
+    nav {
+      background-color: #e9d8c2;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+    }
+
+    nav a {
+      color: #8b4513;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(139,69,19,0.5), rgba(139,69,19,0.5)), url('family-hero.jpg') center/cover no-repeat;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .section {
+      margin: 2rem auto;
+      max-width: 960px;
+      padding: 1.5rem;
+      background-color: #fff;
+      border-left: 5px solid #d2b48c;
+      border-radius: 8px;
+    }
+
+    h2 {
+      color: #8b4513;
+      border-bottom: 2px solid #deb887;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    blockquote.bible-quote {
+      font-style: italic;
+      background-color: #f0f8ff;
+      border-left: 4px solid #4682b4;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+      color: #2a4e74;
+    }
+
+    blockquote.sop-quote {
+      font-style: italic;
+      background-color: #fffaf0;
+      border-left: 4px solid #cd853f;
+      padding: 0.8rem 1.2rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+      color: #5a381e;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #deb887;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #7b3f00;
+    }
+
+    .cta {
+      background-color: #a0522d;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 8px;
+    }
+
+    .cta h2 {
+      border: none;
+      color: white;
+    }
+
+    .cta p {
+      margin-bottom: 0;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      background-color: #a0522d;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8b4513;
+    }
+
+    footer {
+      background-color: #f6ebe3;
+      color: #5a381e;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid #deb887;
+    }
+
+    a {
+      color: #6A0DAD;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="logo" src="social_life.png" alt="Family Life Logo">
+    <h1>Family Life Corner</h1>
+    <p class="subtitle">Christ-Centered Homes | Love & Discipline | Parenting for Heaven</p>
+  </header>
+
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>"As for me and my house, we will serve the Lord." – Joshua 24:15</h2>
+  </section>
+
+  <section class="section" id="about">
+    <h2>Welcome</h2>
+    <p>The Family Life Corner is dedicated to helping Adventist families build homes that reflect heaven. Discover uplifting articles, devotionals, and practical guides grounded in the Bible and Spirit of Prophecy.</p>
+  </section>
+
+  <section class="section" id="articles">
+    <h2>Featured Reads</h2>
+    <div class="articles">
+      <div class="card">
+        <h3>Raising Godly Children</h3>
+        <p>How to cultivate character and faith in the next generation.</p>
+      </div>
+      <div class="card">
+        <h3>Marriage That Lasts</h3>
+        <p>Practical wisdom for nurturing love, respect, and unity.</p>
+      </div>
+      <div class="card">
+        <h3>Family Worship Ideas</h3>
+        <p>Spirit-filled devotions to strengthen your family altar.</p>
+      </div>
+      <div class="card">
+        <h3>Managing Conflict Biblically</h3>
+        <p>Steps to resolving family tensions with Christ-like grace.</p>
+      </div>
+      <div class="card">
+        <h3>Balancing Discipline and Love</h3>
+        <p>Why correction without compassion can hurt more than help.</p>
+      </div>
+      <div class="card">
+        <h3>Christ in the Home</h3>
+        <p>What Ellen White says about inviting Jesus into everyday family life.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta">
+    <h2>Subscribe to Family Devotionals</h2>
+    <p>Get weekly inspiration and biblical counsel straight to your inbox.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> family@secondadvent.org</p>
+    <p><strong>Phone:</strong> +254-700-000-000</p>
+    <p><strong>Facebook:</strong> <a href="#">Family Life Page</a></p>
+
+    <form id="contact-form">
+      <label for="user_name">Name:</label>
+      <input type="text" id="user_name" name="user_name" required>
+
+      <label for="user_email">Email:</label>
+      <input type="email" id="user_email" name="user_email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+    <p id="status-message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Family Life Corner | Second Advent Ministries. All rights reserved.</p>
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("caqZInwR-HtUFRjSg");
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_k4ryml6', 'template_v40fqhn', this)
+        .then(function () {
+          document.getElementById('status-message').textContent = "✅ Message sent successfully!";
+          document.getElementById('contact-form').reset();
+        }, function (error) {
+          document.getElementById('status-message').textContent = "❌ Failed to send. Please try again.";
+          console.error("EmailJS error:", error);
+        });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+/* ======= Base Style 1 ======= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #FAFAFA;
+  color: #0A2647;
+}
+
+header {
+  background-color: #0A2647;
+  color: #FFD700;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+nav {
+  background-color: #093358;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #FFD700;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: url('finance-hero.jpg') center/cover no-repeat;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  background-color: #0008;
+}
+
+.section {
+  padding: 2rem;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #D9D9D9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.cta {
+  background-color: #2ECC71;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: #0A2647;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ======= Base Style 2 (Variation) ======= */
+header {
+  background-color: #6A0DAD;
+  color: #FFD700;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #5a0aa5;
+}
+
+.hero {
+  background: url('family-hero.jpg') center/cover no-repeat;
+  background-color: #0006;
+}
+
+footer {
+  background-color: #6A0DAD;
+}
+
+/* ======= Base Style 3 (Minimal Devotional Page) ======= */
+body {
+  background-color: #f4f8fa;
+  color: #333;
+}
+
+header {
+  background-color: #87CEEB;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #2e7d32;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.featured {
+  background-color: #e0f7fa;
+  border-left: 5px solid #2e7d32;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.devotional-list article {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+.devotional-list article:last-child {
+  border-bottom: none;
+}
+
+.devotional-list h3 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.scripture-box {
+  background: #f1f8e9;
+  border-left: 4px solid #87CEEB;
+  padding: 1rem;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+footer {
+  background-color: #222;
+}
+
+/* ======= Base Style 4 (Advanced Hero Layout) ======= */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: darkblue;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+}
+
+header h1 {
+  color: #FFCC33;
+  margin: 10px 0 5px;
+  font-size: 2rem;
+}
+
+header p {
+  color: #00FFCC;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: darkblue;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 5px 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #006400;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+nav ul li:nth-child(odd) a {
+  background-color: #8B0000;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: -100%;
+  background-color: #FFCC33;
+  transition: left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  left: 0;
+}
+
+section {
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+section:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+section:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  background-color: darkblue;
+  color: #FFCC33;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+footer a {
+  color: #FFCC33;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+/* Scroll to top button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+  background-color: #333;
+}
+
+@media screen and (max-width: 600px) {
+  header img {
+    width: 150px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .newsletter h2 {
+    font-size: 1.5rem;
+  }
+
+  .newsletter p {
+    font-size: 1rem;
+  }
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: url('hero.png') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 50, 0.7);
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 90%;
+  border-radius: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background-color: #FFCC33;
+  color: darkblue;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #FFD700;
+  color: #000;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 15px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background-color: #006400;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #004d00;
+}
+
+/* Testimonies Section */
+.testimonies {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonies h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.testimony-carousel {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.testimony {
+  display: none;
+  font-style: italic;
+}
