@@ -1,0 +1,18 @@
+body { font-family: 'Georgia', serif; background-color: #fffaf5; color: #333; line-height: 1.7; padding: 1.5rem; }
+
+header { background-color: #f6ebe3; padding: 2rem; text-align: center; border-radius: 12px; margin-bottom: 2rem; }
+
+h1 { color: #7b3f00; font-size: 2.5rem; }
+
+.subtitle { font-style: italic; color: #a0522d; }
+
+section { margin-bottom: 2.5rem; padding: 1rem; background-color: #fff; border-left: 5px solid #d2b48c; border-radius: 8px; }
+
+h2 { color: #8b4513; border-bottom: 2px solid #deb887; padding-bottom: 0.3rem; margin-bottom: 1rem; }
+
+blockquote.bible-quote { font-style: italic; background-color: #f0f8ff; border-left: 4px solid #4682b4; padding: 0.8rem 1.2rem; margin: 1rem 0; border-radius: 6px; color: #2a4e74; }
+
+blockquote.sop-quote { font-style: italic; background-color: #fffaf0; border-left: 4px solid #cd853f; padding: 0.8rem 1.2rem; margin: 1rem 0; border-radius: 6px; color: #5a381e; }
+
+footer { text-align: center; padding-top: 1.5rem; color: #666; font-size: 0.9rem; border-top: 1px solid #ddd; margin-top: 2rem; }
+

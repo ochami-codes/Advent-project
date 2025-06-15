@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Finance Corner by Second Advent Ministries offers biblical insights on money, stewardship, saving, investing, and godly financial freedom.">
+  <title>Finance Corner | Second Advent Ministries</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 15px;
+      background-color: #FAFAFA;
+      color: #0A2647;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0A2647;
+      color: #FFD700;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      max-width: 120px;
+      margin: 0 auto 1rem;
+      display: block;
+    }
+
+    nav {
+      background-color: #093358;
+      display: flex;
+      justify-content: center;
+      padding: 1.2rem 0;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      text-decoration: underline;
+      color: #C1B000;
+      outline: none;
+    }
+
+    .hero {
+      background: url('finance-hero.jpg') center/cover no-repeat;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero h2 {
+      font-size: 2.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 2.5rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #2b2b2b;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 720px;
+      margin: 0 auto 1.4rem auto;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #D9D9D9;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover,
+    .card:focus-within {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: #0A2647;
+    }
+
+    .card a {
+      color: #0A2647;
+      text-decoration: none;
+    }
+
+    .card a:hover,
+    .card a:focus {
+      text-decoration: underline;
+      color: #478778;
+      outline: none;
+    }
+
+    .cta {
+      background-color: #2ECC71;
+      color: white;
+      text-align: center;
+      padding: 1.8rem 1rem;
+      border-radius: 10px;
+      margin-top: 3rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover,
+    .cta:focus {
+      background-color: #239c58;
+      outline: none;
+    }
+
+    footer {
+      background-color: #0A2647;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .contact-info,
+      .contact-form,
+      .contact-map {
+        flex: 1;
+      }
+
+      .contact-form {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+    }
+
+    .contact-info address {
+      font-style: normal;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #0A2647;
+    }
+
+    .contact-info a {
+      color: #478778;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover,
+    .contact-info a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    form {
+      background: #f9f9f9;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 3px 15px rgb(0 0 0 / 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #478778;
+      outline: none;
+      box-shadow: 0 0 5px #478778aa;
+    }
+
+    button[type="submit"] {
+      background-color: #478778;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 700;
+      width: 100%;
+    }
+
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background-color: #366a60;
+      outline: none;
+    }
+
+    /* Placeholder for map */
+    .contact-map {
+      background: url('https://via.placeholder.com/400x250?text=Map+Placeholder') no-repeat center center;
+      background-size: cover;
+      border-radius: 10px;
+      min-height: 250px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img
+    class="logo"
+    src="finance.png"
+    alt="Finance Corner Logo"
+    loading="lazy"
+  />
+  <h1>Finance Corner</h1>
+  <p>Godly Stewardship | Biblical Principles | Financial Freedom</p>
+</header>
+
+<nav>
+  <a href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" role="banner" aria-label="Inspirational quote about stewardship">
+  <h2>"It is required in stewards, that a man be found faithful." – 1 Corinthians 4:2</h2>
+</section>
+
+<section class="section" id="about" tabindex="0">
+  <h2>Welcome</h2>
+  <p>
+    Here at the Finance Corner, we explore the biblical foundations of money
+    management, stewardship, saving, investing, and giving. Learn how to honor
+    God with your finances and live a life of purpose and provision.
+  </p>
+</section>
+
+<section class="section" id="articles" tabindex="0">
+  <h2>Featured Articles</h2>
+  <div class="articles" role="list">
+    <article class="card" role="listitem">
+      <h3><a href="budget.html">The Bible on Budgeting</a></h3>
+      <p>
+        Practical steps from Proverbs and Christ’s teachings for wise financial
+        planning.
+      </p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="faithful_stew.html">Faithful Stewardship</a></h3>
+      <p>
+        What it means to manage your time, talents, and treasures for God's
+        glory.
+      </p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="debt_free.html">Debt-Free Living</a></h3>
+      <p>
+        Tips and testimonies from Christians who broke free from financial
+        bondage.
+      </p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="tithing.html">Tithing and Giving</a></h3>
+      <p>
+        Understanding the biblical basis and blessings of faithful giving.
+      </p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="investment.html">Investing with Integrity</a></h3>
+      <p>
+        How to invest wisely while honoring Christian ethics and stewardship.
+      </p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="saving.html">Smart Saving Strategies</a></h3>
+      <p>
+        Learn practical savings techniques aligned with biblical wisdom.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="more-finance-articles" tabindex="0">
+  <h2>More Finance Articles</h2>
+  <div class="articles" role="list">
+    <article class="card" role="listitem">
+      <h3><a href="#">How to Budget as a Christian</a></h3>
+      <p>
+        Learn practical steps to manage your money while staying faithful to
+        biblical principles.
+      </p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="#">Tithes, Offerings & Stewardship</a></h3>
+      <p>Explore the spiritual and financial impact of biblical giving.</p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="#">Smart Saving & Investments</a></h3>
+      <p>Understand how Adventist principles can guide your saving and investing habits.</p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="#">Debt-Free Living God’s Way</a></h3>
+      <p>Break the cycle of debt and embrace biblical financial freedom.</p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="#">Faith & Finances</a></h3>
+      <p>Balancing your spiritual life and financial decisions.</p>
+    </article>
+    <article class="card" role="listitem">
+      <h3><a href="#">Christian Entrepreneurship</a></h3>
+      <p>Starting and running a business with Christ-centered values.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section" tabindex="0">
+  <h2><a href="#" aria-label="Join our weekly finance devotionals">Join our weekly finance devotionals!</a></h2>
+  <p style="text-align: center; max-width: 600px; margin: auto;">
+    Get biblical encouragement and financial wisdom delivered to your inbox.
+  </p>
+</section>
+
+<section class="section" id="contact" tabindex="0">
+  <h2>Contact Us</h2>
+  <div class="contact-container">
+    <div class="contact-info" aria-label="Contact information">
+      <address>
+        <p>Email: <a href="mailto:adventministries2000@gmail.com">adventministries2000@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254795044356">+254 795 044 356</a></p>
+        <p>Facebook: <a href="#" target="_blank" rel="noopener noreferrer">Finance Corner Page</a></p>
+        <p>Instagram: <a href="#" target="_blank" rel="noopener noreferrer">@financecorner</a></p>
+        <p>Twitter: <a href="#" target="_blank" rel="noopener noreferrer">@FinanceCorner</a></p>
+      </address>
+    </div>
+    <form
+      class="contact-form"
+      action="your-form-handler.php"
+      method="POST"
+      aria-label="Contact form"
+    >
+      <label for="name">Your Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+      />
+
+      <label for="email">Your Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      />
+
+      <label for="message">Your Message:</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="6"
+        placeholder="Write your message here..."
+        required
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-map" aria-label="Map location placeholder"></div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Finance Corner | Second Advent Ministries</p>
+</footer>
+
+</body>
+</html>
