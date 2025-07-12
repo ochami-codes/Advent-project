@@ -2,24 +2,28 @@ body {
   font-family: 'Georgia', serif;
   background-color: #fffaf5;
   color: #333;
-  line-height: 1.7;
+  line-height: 1.8;
   padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
-
 
 h1 {
   color: #7b3f00;
-  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
 }
 
 .subtitle {
   font-style: italic;
   color: #a0522d;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 section {
   margin-bottom: 2.5rem;
-  padding: 1rem;
+  padding: 1.2rem;
   background-color: #fff;
   border-left: 5px solid #d2b48c;
   border-radius: 8px;
@@ -32,12 +36,17 @@ h2 {
   margin-bottom: 1rem;
 }
 
+ul {
+  margin-left: 1.2rem;
+  padding-left: 1rem;
+}
+
 blockquote.bible-quote {
   font-style: italic;
   background-color: #f0f8ff;
   border-left: 4px solid #4682b4;
   padding: 0.8rem 1.2rem;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
   border-radius: 6px;
   color: #2a4e74;
 }
@@ -47,7 +56,7 @@ blockquote.sop-quote {
   background-color: #fffaf0;
   border-left: 4px solid #cd853f;
   padding: 0.8rem 1.2rem;
-  margin: 1rem 0;
+  margin: 1.2rem 0;
   border-radius: 6px;
   color: #5a381e;
 }
@@ -60,8 +69,17 @@ footer {
   border-top: 1px solid #ddd;
   margin-top: 2rem;
 }
+
+footer a {
+  text-decoration: none;
+  color: #7b3f00;
+  margin: 0 0.5rem;
+}
+
 .imgdev {
-  width:100%;
+  width: 100%;
+  object-fit: cover;
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 1rem;
+  border-radius: 10px;
 }
