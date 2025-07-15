@@ -1,12 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Studies | Second Advent Ministries</title>
- <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bible Studies | Second Advent Ministries</title>
+  <style>
     * {
       box-sizing: border-box;
-      margin: 5px;
+      margin: 0;
       padding: 0;
     }
 
@@ -15,7 +16,42 @@
       background-color: #f4f9f8;
       color: #2c3e50;
       line-height: 1.6;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .redemption {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
+      text-align: center;
+    }
+
+    .overlay-text {
+      color: #fff;
+      font-size: 2rem;
+      max-width: 800px;
+      font-style: italic;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
     }
 
     main {
@@ -25,6 +61,9 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: -50px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -33,16 +72,14 @@
       margin-bottom: 20px;
     }
 
-    ul {
-      list-style-type: none;
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       padding: 0;
     }
 
-    li {
-      margin-bottom: 12px;
-    }
-
-    a {
+    .navbar a {
       text-decoration: none;
       color: #1a5276;
       font-weight: 500;
@@ -53,7 +90,7 @@
       transition: all 0.3s ease;
     }
 
-    a:hover {
+    .navbar a:hover {
       background: #cce4f7;
       color: #154360;
     }
@@ -75,9 +112,14 @@
       text-align: center;
       font-size: 0.9em;
       color: #777;
+      padding: 20px;
     }
 
     @media (max-width: 600px) {
+      .overlay-text {
+        font-size: 1.2rem;
+      }
+
       main {
         padding: 15px;
       }
@@ -86,36 +128,48 @@
         font-size: 1.5em;
       }
 
-      a {
+      .navbar a {
         font-size: 0.95em;
       }
     }
   </style>
 </head>
 <body>
+
+  <header class="hero">
+    <img class="redemption" src="redemption~2.jpg" alt="Redemption Story">
+    <div class="overlay">
+      <div class="overlay-text">
+        “And I will put enmity between thee and the woman... it shall bruise thy head, and thou shalt bruise his heel.”<br>
+        — <strong>Genesis 3:15</strong>
+      </div>
+    </div>
+  </header>
+
+  <main>
     <h1>The Story of Redemption</h1>
     <nav>
-  <div class="navbar">
-    <a href="evil.html">1. The Origin of Evil</a>
-    <a href="fall.html">2. The Fall of Man</a>
-    <a href="plan.html">3. The Plan of Redemption</a>
-    <a href="covenant.html">4. The Covenant & Patriarchs</a>
-    <a href="mission.html">5. Christ's Mission</a>
-    <a href="victory.html">6. Victory Over Sin</a>
-    <a href="res.html">7. Resurrection & Ascension</a>
-    <a href="ministry.html">8. Heavenly Sanctuary</a>
-    <a href="cont.html">9. End-Time Conflict</a>
-    <a href="second.html">10. Second Coming</a>
-    <a href="new.html">11. The New Earth</a>
-    <a href="place.html">12. Your Place in the Story</a>
-  </div>
-</nav>
-    
-   <a href="bible-study.html" class="back-link">Back</a>
+      <div class="navbar">
+        <a href="evil.html">1. The Origin of Evil</a>
+        <a href="fall.html">2. The Fall of Man</a>
+        <a href="plan.html">3. The Plan of Redemption</a>
+        <a href="covenant.html">4. The Covenant & Patriarchs</a>
+        <a href="mission.html">5. Christ's Mission</a>
+        <a href="victory.html">6. Victory Over Sin</a>
+        <a href="res.html">7. Resurrection & Ascension</a>
+        <a href="ministry.html">8. Heavenly Sanctuary</a>
+        <a href="cont.html">9. End-Time Conflict</a>
+        <a href="second.html">10. Second Coming</a>
+        <a href="new.html">11. The New Earth</a>
+        <a href="place.html">12. Your Place in the Story</a>
+      </div>
+    </nav>
+    <a href="bible-study.html" class="back-link">← Back</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Second Advent Ministries | All rights reserved.</p>
+  </footer>
+
 </body>
-
-
-   <footer>
-        <p>&copy; 2025 Second Advent Ministries | All rights reserved.</p>
-    </footer>
 </html>
