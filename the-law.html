@@ -16,7 +16,43 @@
       background-color: #f4f9f8;
       color: #2c3e50;
       line-height: 1.6;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .law {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 20px;
+      text-align: center;
+    }
+
+    .overlay-text {
+      color: #ffffff;
+      font-size: 1.8rem;
+      max-width: 700px;
+      font-style: italic;
+      line-height: 1.5;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
     main {
@@ -26,6 +62,9 @@
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: -50px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -76,9 +115,14 @@
       text-align: center;
       font-size: 0.9em;
       color: #777;
+      padding: 20px;
     }
 
     @media (max-width: 600px) {
+      .overlay-text {
+        font-size: 1.2rem;
+      }
+
       main {
         padding: 15px;
       }
@@ -94,6 +138,16 @@
   </style>
 </head>
 <body>
+  <header class="hero">
+    <img class="law" src="law.jpg" alt="The Law">
+    <div class="overlay">
+      <div class="overlay-text">
+        “Here is the patience of the saints: here are they that keep the commandments of God, and the faith of Jesus.”<br>
+        — <strong>Revelation 14:12</strong>
+      </div>
+    </div>
+  </header>
+
   <main>
     <h1>The Law of God</h1>
     <ul>
