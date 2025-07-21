@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
           image: "never_knew.png",
           alt: "I Never Knew You"
         },
+            
         {
           title: `"God Will Do It In You" — Claiming Ezekiel 36`,
           summary: "Let God create in you a new heart by surrender.",
