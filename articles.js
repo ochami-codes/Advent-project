@@ -153,6 +153,13 @@ document.addEventListener("DOMContentLoaded", () => {
           link: "ai.html",
           image: "ai.png",
           alt: "AI and the Gospel"
+        },
+        {
+          title: `"It Is Too Late!” – The Tragic End of Judas Iscariot`,
+          summary: "Do you have elements of Judas Iscariot in you? Time to reconsider your christian walk.",
+          link: "Judas.html",
+          image: "judas.jpg",
+          alt: "Judas Iscariot"
         }
       ];
 
