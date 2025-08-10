@@ -160,6 +160,13 @@ document.addEventListener("DOMContentLoaded", () => {
           link: "Judas.html",
           image: "judas.jpg",
           alt: "Judas Iscariot"
+        },
+      {
+            title: "The First Sabbath Choir in the New Jerusalem",
+            summary: "Ever thought how Sabbath choir will look like while Christ is choristering? Let us open up our imaginations!",
+            link:"choir.html",
+            image: "choir.jpg",
+            alt: "Heavenly Choir"
         }
       ];
 
