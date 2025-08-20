@@ -22,6 +22,7 @@
       color: white;
       text-align: center;
       padding: 20px 10px;
+      position: relative;
     }
 
     header img {
@@ -42,63 +43,79 @@
       margin: 0;
     }
 
-    nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 10px;
-      margin: 0;
+    
+
+    /* Sidebar Styles */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
       background-color: darkblue;
-    }
-
-    nav ul li {
-      margin: 5px 10px;
-      opacity: 0;
-      animation: slideIn 0.5s ease forwards;
-    }
-
-    nav ul li:nth-child(1) { animation-delay: 0.1s; }
-    nav ul li:nth-child(2) { animation-delay: 0.2s; }
-    nav ul li:nth-child(3) { animation-delay: 0.3s; }
-    nav ul li:nth-child(4) { animation-delay: 0.4s; }
-    nav ul li:nth-child(5) { animation-delay: 0.5s; }
-    nav ul li:nth-child(6) { animation-delay: 0.6s; }
-    nav ul li:nth-child(7) { animation-delay: 0.7s; }
-
-    nav ul li a {
-      text-decoration: none;
-      padding: 10px 15px;
       color: white;
-      border-radius: 30px;
-      background-color: #006400;
-      transition: 0.3s ease;
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
+      padding: 10px 15px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      border-radius: 5px;
     }
+    
+    .sidebar img {
+  max-width: 100%;
+  height: auto;
+}
 
-    nav ul li:nth-child(odd) a {
-      background-color: #8B0000;
-    }
+.sidebar a {
+  border-radius: 8px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
-    nav ul li a:hover {
-      background-color: #333;
-    }
+.sidebar a:hover {
+  background-color: #001f4d;
+}
 
-    nav ul li a::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: #FFCC33;
-      left: -100%;
-      bottom: 0;
-      transition: left 0.3s ease;
-    }
-
-    nav ul li a:hover::after {
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 0;
       left: 0;
+      background-color: darkblue;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #003366;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
     .hero-banner {
@@ -166,91 +183,87 @@
       }
     }
 
-    .testimonies {
-      background-color: #f9f9f9;
+    .featured-articles {
       padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
     }
 
-    .testimonies h2 {
+    .featured-articles h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    .testimony-carousel {
+    .article-carousel {
       max-width: 700px;
       margin: auto;
+      position: relative;
     }
 
-    .testimony {
+    .article {
       display: none;
-      background-color: white;
-      padding: 20px;
-      font-style: italic;
-      font-size: 1.1rem;
-      border-left: 5px solid darkblue;
+      background-color: gold;
+      padding: 30px 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 5s ease forwards;
     }
 
-    .testimony.active {
-      display: block;
-    }
-
-    .testimony span {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #006400;
-    }
-
-    .newsletter {
-      background-color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .newsletter h2 {
-      font-size: 2rem;
+    .article h3 {
+      color: darkblue;
       margin-bottom: 10px;
     }
 
-    .newsletter p {
+    .article p {
       font-size: 1.1rem;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .newsletter-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    .newsletter-form input[type="email"] {
-      padding: 12px 15px;
-      border: 2px solid #ccc;
-      border-radius: 25px;
-      font-size: 1rem;
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .newsletter-form button {
+    .article a {
       background-color: #006400;
       color: white;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
-    .newsletter-form button:hover {
+    .article a:hover {
       background-color: #004d00;
+    }
+
+    .article.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .view-all-btn {
+      margin-top: 20px;
+    }
+
+    .view-all-btn a {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #003366;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-all-btn a:hover {
+      background-color: #001f4d;
     }
 
     footer {
@@ -268,10 +281,6 @@
 
     footer a:hover {
       text-decoration: underline;
-    }
-
-    footer p {
-      margin: 10px 0;
     }
 
     #scrollTopBtn {
@@ -305,136 +314,34 @@
         opacity: 1;
       }
     }
-
-    @media screen and (max-width: 600px) {
-      header img {
-        width: 150px;
-      }
-
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin: 8px 0;
-      }
-
-      .hero-overlay h1,
-      .testimonies h2,
-      .newsletter h2 {
-        font-size: 1.5rem;
-      }
-
-      .hero-overlay p,
-      .testimony,
-      .newsletter p {
-        font-size: 1rem;
-      }
-    }
-    .featured-articles {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.featured-articles h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.article-carousel {
-  max-width: 700px;
-  margin: auto;
-  position: relative;
-}
-
-.article {
-  display: none;
-  background-color: gold;
-  padding: 30px 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  animation: fadeIn 5s ease forwards;
-}
-
-.article h3 {
-  color: darkblue;
-  margin-bottom: 10px;
-}
-
-.article p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-.article a {
-  background-color: #006400;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.article a:hover {
-  background-color: #004d00;
-}
-
-.article.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+    @media (max-width: 768px) {
+  .featured-articles div[style*="flex-wrap"] {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .featured-articles h2 {
-    font-size: 1.5rem;
-  }
-
-  .article p {
-    font-size: 1rem;
-  }
-}
-.view-all-btn {
-  margin-top: 20px;
-}
-
-.view-all-btn a {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #003366;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.view-all-btn a:hover {
-  background-color: #001f4d;
 }
   </style>
 </head>
 
 <body>
+<!-- Sidebar toggle button -->
+<div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+ <div id="sidebarMenu" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+
+  <!-- Logo/Image at the top -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <img src="bible-light.jpg" alt="Bible Light" style="width: 150px; border-radius: 10px; margin-top: 10px;" />
+  </div>
+
+  <!-- Menu Links -->
+  <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 15px;">
+    <a href="home.html">🏠 Home</a>
+    <a href="about.html">ℹ️ About</a>
+    <a href="contact.html">📞 Contact</a>
+  </div>
+</div>
+
   <header>
     <img src="secondadvent2.png" alt="Second Advent Ministries Logo" />
     <h1>Second Advent Ministries</h1>
@@ -443,13 +350,7 @@
 
   <nav>
     <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="bible-study.html">Bible Studies</a></li>
-      <li><a href="health-corner.html">Health Corner</a></li>
-      <li><a href="finance_corner.html">Finance Corner</a></li>
-      <li><a href="family_corner.html">Family Life Corner</a></li>
-      <li><a href="contact.html">Contacts</a></li>
+
     </ul>
   </nav>
 
@@ -457,8 +358,6 @@
     <div class="hero-overlay">
       <h1>Welcome to Second Advent Ministries</h1>
       <p>Proclaiming the Everlasting Gospel with Truth and Love</p>
-      <a href="bible-study.html" class="hero-btn">Explore Bible Studies</a>
-      <a href="devotionals.html" class="hero-btn">Explore Devotional Articles</a>
     </div>
   </div>
 
@@ -471,40 +370,67 @@
     <h1>Our Mission</h1>
     <p>To lead souls to Christ, uplift present truth, and prepare a people for the Second Coming through digital evangelism, Bible studies, and health reform.</p>
   </section>
+  
+  <section class="featured-articles">
+  <h2>Explore Ministry Sections</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
 
-<section class="featured-articles">
-  <h2>Featured Articles</h2>
-  <div class="article-carousel">
-    <div class="article active">
-      <h3>Undue Familiarity — A Subtle Snare</h3>
-      <p>Discover how undue familiarity is silently eroding the spiritual strength of Christian youth. It’s death wrapped in harmless appearances. It’s friendliness with a trap beneath..</p>
-      <a href="familiarity.html">Read More</a>
+    <div style="background-color: #003366; color: white; padding: 20px; border-radius: 15px; width: 280px;">
+      <h3>Bible Study Corner</h3>
+      <p>Dive deep into present truth Bible studies for our time.</p>
+      <a href="bible-study.html" class="hero-btn">Explore</a>
     </div>
-    <div class="article">
-      <h3>“I Never Knew You” — Does God Really Know You?</h3>
-      <p>Yes, the Lord is aware that you exist—but does He know you?. Let's see if God knows you...</p>
-      <a href="never_knew.html">Read More</a>
+
+    <div style="background-color: #006400; color: white; padding: 20px; border-radius: 15px; width: 280px;">
+      <h3>Health Corner</h3>
+      <p>Learn natural remedies, lifestyle habits, and health reform tips.</p>
+      <a href="health-corner.html" class="hero-btn">Explore</a>
     </div>
-    <div class="article">
-      <h3>Almost Saved, Eternally Lost</h3>
-      <p>Read the sad tale of Guonzou on how he missed the only chance to be saved. Read more on how to avoid the same mistake in spiritual realm...</p>
-      <a href="almost_saved.html">Read More</a>
+
+    <div style="background-color: #8B0000; color: white; padding: 20px; border-radius: 15px; width: 280px;">
+      <h3>Finance Corner</h3>
+      <p>Explore godly stewardship and simple finance tips.</p>
+      <a href="finance_corner.html" class="hero-btn">Explore</a>
     </div>
+
+    <div style="background-color: darkorange; color: white; padding: 20px; border-radius: 15px; width: 280px;">
+      <h3>Family Life Corner</h3>
+      <p>Resources for godly homes, courtship, and parenting.</p>
+      <a href="family_corner.html" class="hero-btn">Explore</a>
+    </div>
+
+    <div style="background-color: #2e0854; color: white; padding: 20px; border-radius: 15px; width: 280px;">
+      <h3>Spiritual Toolkit</h3>
+      <p>Interactive tools to grow your faith and stay connected to Christ.</p>
+      <a href="toolkit.html" class="hero-btn">Open Toolkit</a>
+    </div>
+
   </div>
-  <div class="view-all-btn">
-  <a href="articles.html">View More Articles</a>
-</div>
 </section>
 
-  <!-- NOTE: Backend submission coming soon. I'm learning how to handle POST requests in Node.js/PHP/etc. <section class="newsletter">
-    <h2>Stay Updated</h2>
-    <p>Join our email list to receive devotionals, Bible studies, and ministry news.</p>
-    <form class="newsletter-form">
-      <label for="email" class="sr-only">Email address</label>
-      <input type="email" id="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>-->
+  <section class="featured-articles">
+    <h2>Featured Articles</h2>
+    <div class="article-carousel">
+      <div class="article active">
+        <h3>Undue Familiarity — A Subtle Snare</h3>
+        <p>Discover how undue familiarity is silently eroding the spiritual strength of Christian youth...</p>
+        <a href="familiarity.html">Read More</a>
+      </div>
+      <div class="article">
+        <h3>“I Never Knew You” — Does God Really Know You?</h3>
+        <p>Yes, the Lord is aware that you exist—but does He know you?</p>
+        <a href="never_knew.html">Read More</a>
+      </div>
+      <div class="article">
+        <h3>Almost Saved, Eternally Lost</h3>
+        <p>Read the sad tale of Guonzou on how he missed the only chance to be saved...</p>
+        <a href="almost_saved.html">Read More</a>
+      </div>
+    </div>
+    <div class="view-all-btn">
+      <a href="articles.html">View More Articles</a>
+    </div>
+  </section>
 
   <footer>
     <h3>Second Advent Ministries</h3>
@@ -521,24 +447,30 @@
   <button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">&#8679;</button>
 
   <script>
-    // Scroll to top functionality
+    // Scroll to top
     const scrollBtn = document.getElementById("scrollTopBtn");
     window.onscroll = () => scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // Sidebar toggle
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebarMenu");
+      sidebar.style.width = (sidebar.style.width === "250px") ? "0" : "250px";
+    }
+
+    // Article carousel
+    let currentArticle = 0;
+    const articles = document.querySelectorAll('.article-carousel .article');
+
+    function showNextArticle() {
+      articles[currentArticle].classList.remove('active');
+      currentArticle = (currentArticle + 1) % articles.length;
+      articles[currentArticle].classList.add('active');
+    }
+
+    setInterval(showNextArticle, 6000);
   </script>
-  <script>
-  let currentArticle = 0;
-  const articles = document.querySelectorAll('.article-carousel .article');
-
-  function showNextArticle() {
-    articles[currentArticle].classList.remove('active');
-    currentArticle = (currentArticle + 1) % articles.length;
-    articles[currentArticle].classList.add('active');
-  }
-
-  setInterval(showNextArticle, 6000); // change article every 6 seconds
-</script>
 </body>
 </html>
