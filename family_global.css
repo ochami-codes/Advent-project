@@ -1,0 +1,149 @@
+/* Family Corner Global Style */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fffaf5;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Banner */
+.header-banner {
+  background-image: url('header-image.jpg'); /* Customize per page */
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.header-banner h1 {
+  background-color: rgba(204, 85, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 2.5em;
+}
+
+/* Main Content */
+main {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Section Headings */
+h2, h3 {
+  color: #cc5500; /* Dark orange */
+  margin-top: 40px;
+  border-bottom: 2px solid #cc5500;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Quotes - Bible, SOP, etc. */
+blockquote.bible {
+  border-left: 6px solid #cc5500;
+  background-color: #fff2e6;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+}
+.bible::before {
+  content: "📖 “";
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-right: 0.3em;
+  vertical-align: -0.3em;
+}
+
+blockquote.sop {
+  border-left: 6px solid #8b4513;
+  background-color: #f9f0ea;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.sop::before {
+  content: "📚 “";
+  font-size: 1.5em;
+  color: #FFC107;
+  margin-right: 0.3em;
+  vertical-align: -0.3em;
+}
+
+blockquote.science {
+  border-left: 6px solid #3b7d8b;
+  background-color: #eaf9fc;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+}
+.science::before {
+  content: "🧬 “";
+  font-size: 1.5em;
+  color: #2196F3;
+  margin-right: 0.3em;
+  vertical-align: -0.3em;
+}
+
+/* Bible Reference Text */
+.ref {
+  display: block;
+  text-align: right;
+  font-size: 0.95em;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Lists */
+ul {
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  color: #cc5500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a74300;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #cc5500;
+  color: white;
+  margin-top: 60px;
+}
+
+/* Cards (Optional for Related Topics) */
+.card-link {
+  display: block;
+  background-color: #ffe5cc;
+  border-left: 6px solid #cc5500;
+  padding: 20px;
+  margin: 20px 0;
+  text-decoration: none;
+  color: #333;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.card-link:hover {
+  background-color: #ffd4aa;
+}
