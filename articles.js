@@ -161,12 +161,19 @@ document.addEventListener("DOMContentLoaded", () => {
           image: "judas.jpg",
           alt: "Judas Iscariot"
         },
-      {
+        {
             title: "The First Sabbath Choir in the New Jerusalem",
             summary: "Ever thought how Sabbath choir will look like while Christ is choristering? Let us open up our imaginations!",
             link:"choir.html",
             image: "choir.jpg",
             alt: "Heavenly Choir"
+        },
+                {
+            title: "Where Is Thy Beautiful Flock",
+            summary: "Where are your children? A solemn question for the modern mothers.",
+            link:"little_flock.html",
+            image: "flock.png",
+            alt: "Mother and child holding hands."
         }
       ];
 
