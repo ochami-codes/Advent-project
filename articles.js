@@ -174,6 +174,14 @@ document.addEventListener("DOMContentLoaded", () => {
             link:"little_flock.html",
             image: "flock.png",
             alt: "Mother and child holding hands."
+        },
+        
+        {
+            title: "Lessons From Cancer And The Fall Of Lucifer",
+            summary: "Cancer comes as a result of a rebellious cell that has refused regulations. Let's garner lessons here.",
+            link: "cancer.html",
+            image: "cancer.jpg",
+            alt: "Normal vs Cancer Cell"
         }
       ];
 
