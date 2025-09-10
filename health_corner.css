@@ -184,6 +184,34 @@ footer {
   vertical-align: -0.3em;
 }
 
+.article-header {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  padding: 2rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.article-header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.article-header p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #f0f0f0;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .card {
