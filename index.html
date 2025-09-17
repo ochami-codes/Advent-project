@@ -43,8 +43,6 @@
       margin: 0;
     }
 
-    
-
     /* Sidebar Styles */
     .menu-toggle {
       display: none;
@@ -56,56 +54,54 @@
       position: fixed;
       top: 20px;
       left: 20px;
-      z-index: 1000;
+      z-index: 1001;
       border-radius: 5px;
     }
-    
-    .sidebar img {
-  max-width: 100%;
-  height: auto;
-}
 
-.sidebar a {
-  border-radius: 8px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.sidebar a:hover {
-  background-color: #001f4d;
-}
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
 
     .sidebar {
       height: 100%;
       width: 0;
+      max-width: 280px;
       position: fixed;
-      z-index: 999;
+      z-index: 1002;
       top: 0;
       left: 0;
       background-color: darkblue;
       overflow-x: hidden;
       transition: 0.3s;
-      padding-top: 60px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
     }
 
     .sidebar a {
-      padding: 10px 15px;
+      padding: 12px 20px;
       text-decoration: none;
       font-size: 18px;
       color: white;
       display: block;
       transition: 0.3s;
+      font-weight: bold;
     }
 
     .sidebar a:hover {
-      background-color: #003366;
-    }
-
-    .sidebar .closebtn {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 36px;
+      background-color: #001f4d;
     }
 
     @media screen and (max-width: 768px) {
@@ -236,17 +232,6 @@
       display: block;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     .view-all-btn {
       margin-top: 20px;
     }
@@ -303,75 +288,51 @@
     #scrollTopBtn:hover {
       background-color: #333;
     }
-
-    @keyframes slideIn {
-      from {
-        transform: translateY(-20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-    @media (max-width: 768px) {
-  .featured-articles div[style*="flex-wrap"] {
-    flex-direction: column;
-    align-items: center;
-  }
-}
   </style>
 </head>
 
 <body>
 <!-- Sidebar toggle button -->
-<div class="menu-toggle" onclick="toggleSidebar()">☰</div>
- <div id="sidebarMenu" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+<div class="menu-toggle" onclick="openSidebar()">☰</div>
 
-  <!-- Logo/Image at the top -->
-  <div style="text-align: center; margin-bottom: 20px;">
-    <img src="bible-light.jpg" alt="Bible Light" style="width: 150px; border-radius: 10px; margin-top: 10px;" />
-  </div>
+<div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<div id="sidebarMenu" class="sidebar">
+  <!-- Image at the top -->
+  <img src="bible-light.jpg" alt="Bible Light" />
 
   <!-- Menu Links -->
-  <div style="display: flex; flex-direction: column; gap: 10px; padding: 0 15px;">
+  <div style="display: flex; flex-direction: column; gap: 5px; padding: 10px;">
     <a href="home.html">🏠 Home</a>
     <a href="about.html">ℹ️ About</a>
     <a href="contact.html">📞 Contact</a>
   </div>
 </div>
 
-  <header>
-    <img src="secondadvent2.png" alt="Second Advent Ministries Logo" />
-    <h1>Second Advent Ministries</h1>
-    <p>Until the World has Heard, Preach the Word!</p>
-  </header>
+<header>
+  <img src="secondadvent2.png" alt="Second Advent Ministries Logo" />
+  <h1>Second Advent Ministries</h1>
+  <p>Until the World has Heard, Preach the Word!</p>
+</header>
 
-  <nav>
-    <ul>
-
-    </ul>
-  </nav>
-
-  <div class="hero-banner">
-    <div class="hero-overlay">
-      <h1>Welcome to Second Advent Ministries</h1>
-      <p>Proclaiming the Everlasting Gospel with Truth and Love</p>
-    </div>
+<div class="hero-banner">
+  <div class="hero-overlay">
+    <h1>Welcome to Second Advent Ministries</h1>
+    <p>Proclaiming the Everlasting Gospel with Truth and Love</p>
   </div>
+</div>
 
-  <section>
-    <h1>Welcome!</h1>
-    <p>Preaching the end-time message while radiating love to others.</p>
-  </section>
+<section>
+  <h1>Welcome!</h1>
+  <p>Preaching the end-time message while radiating love to others.</p>
+</section>
 
-  <section>
-    <h1>Our Mission</h1>
-    <p>To lead souls to Christ, uplift present truth, and prepare a people for the Second Coming through digital evangelism, Bible studies, and health reform.</p>
-  </section>
-  
-  <section class="featured-articles">
+<section>
+  <h1>Our Mission</h1>
+  <p>To lead souls to Christ, uplift present truth, and prepare a people for the Second Coming through digital evangelism, Bible studies, and health reform.</p>
+</section>
+
+<section class="featured-articles">
   <h2>Explore Ministry Sections</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
 
@@ -408,69 +369,73 @@
   </div>
 </section>
 
-  <section class="featured-articles">
-    <h2>Featured Articles</h2>
-    <div class="article-carousel">
-      <div class="article active">
-        <h3>Undue Familiarity — A Subtle Snare</h3>
-        <p>Discover how undue familiarity is silently eroding the spiritual strength of Christian youth...</p>
-        <a href="familiarity.html">Read More</a>
-      </div>
-      <div class="article">
-        <h3>“I Never Knew You” — Does God Really Know You?</h3>
-        <p>Yes, the Lord is aware that you exist—but does He know you?</p>
-        <a href="never_knew.html">Read More</a>
-      </div>
-      <div class="article">
-        <h3>Almost Saved, Eternally Lost</h3>
-        <p>Read the sad tale of Guonzou on how he missed the only chance to be saved...</p>
-        <a href="almost_saved.html">Read More</a>
-      </div>
+<section class="featured-articles">
+  <h2>Featured Articles</h2>
+  <div class="article-carousel">
+    <div class="article active">
+      <h3>Undue Familiarity — A Subtle Snare</h3>
+      <p>Discover how undue familiarity is silently eroding the spiritual strength of Christian youth...</p>
+      <a href="familiarity.html">Read More</a>
     </div>
-    <div class="view-all-btn">
-      <a href="articles.html">View More Articles</a>
+    <div class="article">
+      <h3>“I Never Knew You” — Does God Really Know You?</h3>
+      <p>Yes, the Lord is aware that you exist—but does He know you?</p>
+      <a href="never_knew.html">Read More</a>
     </div>
-  </section>
-
-  <footer>
-    <h3>Second Advent Ministries</h3>
-    <p>Proclaiming the Everlasting Gospel to All the World in This Generation</p>
-    <div>
-      <a href="https://www.facebook.com/profile.php?id=61559184882969">Facebook</a>
-      <a href="https://youtube.com/@2adventministries-y8x?si=XhFliTaGLzFkQZj3">YouTube</a>
-      <a href="mailto:adventministries2000@gmail.com">Email Us</a>
+    <div class="article">
+      <h3>Almost Saved, Eternally Lost</h3>
+      <p>Read the sad tale of Guonzou on how he missed the only chance to be saved...</p>
+      <a href="almost_saved.html">Read More</a>
     </div>
-    <p>&copy; 2025 Second Advent Ministries. All Rights Reserved.</p>
-    <p style="font-size: 12px;">"Fear God, and give glory to Him..." – Revelation 14:7</p>
-  </footer>
+  </div>
+  <div class="view-all-btn">
+    <a href="articles.html">View More Articles</a>
+  </div>
+</section>
 
-  <button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">&#8679;</button>
+<footer>
+  <h3>Second Advent Ministries</h3>
+  <p>Proclaiming the Everlasting Gospel to All the World in This Generation</p>
+  <div>
+    <a href="https://www.facebook.com/profile.php?id=61559184882969">Facebook</a>
+    <a href="https://youtube.com/@2adventministries-y8x?si=XhFliTaGLzFkQZj3">YouTube</a>
+    <a href="mailto:adventministries2000@gmail.com">Email Us</a>
+  </div>
+  <p>&copy; 2025 Second Advent Ministries. All Rights Reserved.</p>
+  <p style="font-size: 12px;">"Fear God, and give glory to Him..." – Revelation 14:7</p>
+</footer>
 
-  <script>
-    // Scroll to top
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = () => scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Back to top">&#8679;</button>
 
-    // Sidebar toggle
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebarMenu");
-      sidebar.style.width = (sidebar.style.width === "250px") ? "0" : "250px";
-    }
+<script>
+  // Scroll to top
+  const scrollBtn = document.getElementById("scrollTopBtn");
+  window.onscroll = () => scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-    // Article carousel
-    let currentArticle = 0;
-    const articles = document.querySelectorAll('.article-carousel .article');
+  // Sidebar functions
+  function openSidebar() {
+    document.getElementById("sidebarMenu").style.width = "250px";
+    document.querySelector(".sidebar-overlay").style.display = "block";
+  }
+  function closeSidebar() {
+    document.getElementById("sidebarMenu").style.width = "0";
+    document.querySelector(".sidebar-overlay").style.display = "none";
+  }
 
-    function showNextArticle() {
-      articles[currentArticle].classList.remove('active');
-      currentArticle = (currentArticle + 1) % articles.length;
-      articles[currentArticle].classList.add('active');
-    }
+  // Article carousel
+  let currentArticle = 0;
+  const articles = document.querySelectorAll('.article-carousel .article');
 
-    setInterval(showNextArticle, 6000);
-  </script>
+  function showNextArticle() {
+    articles[currentArticle].classList.remove('active');
+    currentArticle = (currentArticle + 1) % articles.length;
+    articles[currentArticle].classList.add('active');
+  }
+
+  setInterval(showNextArticle, 6000);
+</script>
 </body>
 </html>
