@@ -5,12 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Health Corner | Second Advent Ministries</title>
   <link rel="stylesheet" href="health_corner.css" />
+  <style>
+    /* ✅ Basic Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #3ba371, #1f6f54);
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    header img.logo {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #1f6f54;
+      margin-bottom: 1rem;
+      border-left: 5px solid #3ba371;
+      padding-left: 10px;
+    }
+
+    /* ✅ Cards */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #2b4c3f;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: #3ba371;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1f6f54;
+    }
+
+    /* ✅ Forms */
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    form button {
+      width: 100%;
+    }
+
+    /* ✅ Health Tool Inputs */
+    input[type="number"], select {
+      padding: 0.5rem;
+      width: 100%;
+      margin-bottom: 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
+    #bpinfo, #sugarinfo, #bminfo {
+      margin-top: 0.7rem;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* ✅ Downloads */
+    .downloads {
+      list-style: none;
+    }
+
+    .downloads li {
+      margin-bottom: 0.7rem;
+    }
+
+    /* ✅ Footer */
+    footer {
+      background: #1f6f54;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .footer-links a {
+      color: #f7f9fc;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ✅ Responsive Grid for Cards */
+    @media (min-width: 700px) {
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="health_corner.png" alt="official health corner logo" class="logo" />
     <h1>Health Corner</h1>
-    <p>“Beloved, I wish above all things that thou mayest prosper and be in health...” – 3 John 1:2</p>
+    <p>“Beloved, I wish above all things that thou mayest prosper and be in health…” – 3 John 1:2</p>
   </header>
 
   <div class="container">
@@ -21,52 +183,110 @@
 
     <section>
       <h2>Featured Articles</h2>
-      <div class="card">
-        <h3>The Power of the NEWSTART Lifestyle</h3>
-        <p>Small changes, big impact! Learn about the eight natural remedies God has given for abundant health.</p>
-        <a href="new_start.html" class="btn">Read More</a>
-      </div>
-      <div class="card">
-        <h3>God’s Way to Beat Diabetes Naturally</h3>
-        <p>Discover diet, herbs, and lifestyle tools that help manage blood sugar naturally.</p>
-        <a href="diabetes .html" class="btn">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Understanding God’s Pharmacy</h3>
-        <p>Did you know onions, garlic, and figs are mentioned in the Bible for their healing power?</p>
-        <a href="pharmacy.html" class="btn">Read More</a>
+      <div class="card-grid">
+        <div class="card">
+          <h3>The Power of the NEWSTART Lifestyle</h3>
+          <p>Small changes, big impact! Learn about the eight natural remedies God has given for abundant health.</p>
+          <a href="new_start.html" class="btn">Read More</a>
+        </div>
+        <div class="card">
+          <h3>God’s Way to Beat Diabetes Naturally</h3>
+          <p>Discover diet, herbs, and lifestyle tools that help manage blood sugar naturally.</p>
+          <a href="diabetes.html" class="btn">Read More</a>
+        </div>
+        <div class="card">
+          <h3>Understanding God’s Pharmacy</h3>
+          <p>Did you know onions, garlic, and figs are mentioned in the Bible for their healing power?</p>
+          <a href="pharmacy.html" class="btn">Read More</a>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>More Health Articles</h2>
-      <div class="card">
-        <h3>Sunlight: Heaven's Vitamin</h3>
-        <p>Discover the healing benefits of sunlight, from boosting mood to strengthening your immune system.</p>
-        <a href="sunlight.html" class="btn">Read More</a>
-      </div>
-      <div class="card">
-        <h3>Hydrotherapy at Home</h3>
-        <p>Simple water treatments you can do at home for fevers, inflammation, fatigue, and more.</p>
-        <a href="hydrotherapy.html" class="btn">Read More</a>
-      </div>
-      <div class="card">
-        <h3>The Ministry of Rest</h3>
-        <p>Explore how proper sleep and Sabbath rest restore physical and spiritual vitality.</p>
-        <a href="rest.html" class="btn">Read More</a>
-      </div>
-       <div class="card">
+      <div class="card-grid">
+        <div class="card">
+          <h3>Sunlight: Heaven's Vitamin</h3>
+          <p>Discover the healing benefits of sunlight, from boosting mood to strengthening your immune system.</p>
+          <a href="sunlight.html" class="btn">Read More</a>
+        </div>
+        <div class="card">
+          <h3>Hydrotherapy at Home</h3>
+          <p>Simple water treatments you can do at home for fevers, inflammation, fatigue, and more.</p>
+          <a href="hydrotherapy.html" class="btn">Read More</a>
+        </div>
+        <div class="card">
+          <h3>The Ministry of Rest</h3>
+          <p>Explore how proper sleep and Sabbath rest restore physical and spiritual vitality.</p>
+          <a href="rest.html" class="btn">Read More</a>
+        </div>
+        <div class="card">
           <h3>DNA: God's Divine Code for Life</h3>
-          <p>DNA is not just a molecule — it is a testimony. It whispers of a Creator who is both powerful and personal, scientific and spiritual. </p> <a href="dna_code.html" class="btn">Read More</a>
-          </div>
+          <p>DNA is not just a molecule — it is a testimony. It whispers of a Creator who is both powerful and personal.</p> 
+          <a href="dna_code.html" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ Health Checker Tool Section -->
+    <section>
+      <h2>Health Checker Tool</h2>
+      <p>Use this simple tool to check your Blood Pressure, Blood Sugar, and BMI. This does not replace professional medical advice.</p>
+
+      <div class="card">
+        <h3>Blood Pressure & Pulse Checker</h3>
+        <label for="syst">Systolic (mmHg)</label>
+        <input type="number" id="syst" placeholder="e.g. 120" />
+
+        <label for="diast">Diastolic (mmHg)</label>
+        <input type="number" id="diast" placeholder="e.g. 80" />
+
+        <label for="pulse">Pulse (bpm)</label>
+        <input type="number" id="pulse" placeholder="e.g. 70" />
+
+        <button class="btn" onclick="checker()">Check</button>
+        <button class="btn" style="background:#999;" onclick="clearFields()">Clear</button>
+        <div id="bpinfo"></div>
+      </div>
+
+      <div class="card">
+        <h3>Blood Sugar Checker</h3>
+        <div style="display:flex; gap:8px;">
+          <input type="number" id="sugar" placeholder="Enter value" />
+          <select id="unit">
+            <option value="mgdl">mg/dL</option>
+            <option value="mmol">mmol/L</option>
+          </select>
+        </div>
+        <button class="btn" onclick="sugarCheck()">Check Sugar</button>
+        <button class="btn" style="background:#999;" onclick="clearSugar()">Clear</button>
+        <div id="sugarinfo"></div>
+      </div>
+
+      <div class="card">
+        <h3>BMI Checker</h3>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="e.g. 65">
+
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="e.g. 170">
+        <select id="heightUnit">
+          <option value="cm">cm</option>
+          <option value="m">m</option>
+        </select>
+
+        <button class="btn" onclick="bmi()">Check BMI</button>
+        <button class="btn" style="background:#999;" onclick="clearB()">Clear</button>
+        <div id="bminfo"></div>
+      </div>
     </section>
 
     <section>
       <h2>Downloadable Resources</h2>
       <ul class="downloads">
-        <li><a href="ministry_healing.docx" class="btn" download>Download Ministry of Healing</a></li>
-        <li><a href="natural_remedies.pdf" class="btn" download>Download 10 Natural Remedies Guide</a></li>
-        <li><a href="vegan_plan.docx" class="btn" download>Download Vegan/Vegetarian Living Plan</a></li>
+        <li><a href="ministry_of_healing.htm" class="btn" download>Download Ministry of Healing</a></li>
+        <li><a href="#" class="btn">Download 10 Natural Remedies Guide</a></li>
+        <li><a href="#" class="btn">Download Vegan/Vegetarian Living Plan</a></li>
       </ul>
     </section>
 
@@ -88,7 +308,7 @@
 
   <footer>
     <div class="footer-links">
-      <a href="index.html">Home</a> |
+      <a href="home.html">Home</a> |
       <a href="bible-study.html">Bible Studies</a> |
       <a href="health-corner.html">Health Corner</a> |
       <a href="about.html">About</a> |
@@ -96,5 +316,8 @@
     </div>
     <p>“Taste and see that the Lord is good!”</p>
   </footer>
+
+  <!-- ✅ Link to JavaScript file -->
+  <script src="health_checker.js"></script>
 </body>
 </html>
