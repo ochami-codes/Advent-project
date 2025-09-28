@@ -1,207 +1,260 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Devotional Articles | Second Advent Ministries</title>
-  <link rel="stylesheet" href="devotions.css" />
-  <style>
-    /* === Base Styles === */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #222;
-    }
+document.addEventListener("DOMContentLoaded", () => {
+      const articles = [
+        {
+          title: `"I Never Knew You" — The Dangers of Outward Religion`,
+          summary: "Outward faith isn't enough—Christ must know you personally.",
+          link: "never_knew.html",
+          image: "never_knew.png",
+          alt: "I Never Knew You"
+        },
+        {
+          title: `"God Will Do It In You" — Claiming Ezekiel 36`,
+          summary: "Let God create in you a new heart by surrender.",
+          link: "righteousness.html",
+          image: "new_heart.png",
+          alt: "God Will Do It In You"
+        },
+        {
+          title: "Undue Familiarity — A Subtle Snare",
+          summary: "Emotional entanglements can dull your spiritual edge",
+          link: "familiarity.html",
+          image: "familiarity.jpg",
+          alt: "Undue Familiarity"
+        },
+        {
+          title: "Why Christ Delays",
+          summary: "Understand the real reason Jesus hasn’t returned yet",
+          link: "delayed.html",
+          image: "delayed.jpg",
+          alt: "Why Christ Delays"
+        },
+        {
+          title: "Faithfulness In a Faithless Generation",
+          summary: "Can you still obey God when most won't?",
+          link: "faithfulness_dev.html",
+          image: "faithful.jpg",
+          alt: "Faithfulness"
+        },
+        {
+          title: "When God Lets Go",
+          summary: "Mercy has limits. Use your time wisely",
+          link: "letgo.html",
+          image: "let_go.jpg",
+          alt: "When God Lets Go"
+        },
+        {
+          title: "God With Us",
+          summary: "God is closer than you think—even in silence",
+          link: "gods_love.html",
+          image: "emmanuel.jpg",
+          alt: "God With Us"
+        },
+        {
+          title: "Am I My Brother's Keeper?",
+          summary: "Your life may be the light someone needs",
+          link: "keeper.html",
+          image: "keeper.jpg",
+          alt: "My Brother's Keeper"
+        },
+        {
+          title: "Almost Saved, Eternally Lost",
+          summary: "Being close isn't enough—are you fully surrendered?",
+          link: "almost_saved.html",
+          image: "almost.jpg",
+          alt: "Almost Saved"
+        },
+        {
+          title: "Look and Live",
+          summary: "Salvation is offered, will you accept and live?",
+          link: "look_live.html",
+          image: "look_live.jpg",
+          alt: "Look and Live"
+        },
+        {
+          title: "The Seventh Commandment Under Siege",
+          summary: "Purity is under attack. How will you survive?",
+          link: "call_purity.html",
+          image: "siege.png",
+          alt: "Purity under attack"
+        },
+        {
+          title: "The Danger of Delay",
+          summary: "Delaying obedience may cost your eternity ",
+          link: "no_time.html",
+          image: "delay.jpg",
+          alt: "Danger of Delay"
+        },
+        {
+          title: "God's Promises in Trials",
+          summary: "Trials test, but also strengthen your faith.",
+          link: "promise_trials.html",
+          image: "promises.jpg",
+          alt: "God's Promises"
+        },
+        {
+          title: "When Doubt Silences Us",
+          summary: "Doubt can mute your witness, believe and speak",
+          link: "doubt_warning.html",
+          image: "doubt.jpg",
+          alt: "Doubt Silences"
+        },
+        {
+          title: "True Worship",
+          summary: "God is more concerned about the condition of our hearts than our offerings.",
+          link: "accepted.html",
+          image: "true_worship.jpg",
+          alt: "True Worship"
+        },
+        {
+          title: "Last Night In Sodom",
+          summary: "Individuals of Sodom filled up the cup of their iniquity, are you filling yours too?",
+          link: "sodom.html",
+          image: "sodom.png",
+          alt: "Sodom"
+        },
+        {
+          title: "The Key For Divine Blessing",
+          summary: "Wondering why there seems to be holes in your pocket? You may be under the divine curse.",
+          link: "tithe.html",
+          image: "blessings.png",
+          alt: "Divine Curse"
+        },
+        {
+          title: "Masturbation and Pornography",
+          summary: "Masturbation and pornography—a deadly duo",
+          link: "secret.html",
+          image: "chains.jpg",
+          alt: "Deadly Duo"
+        },
+        {
+          title: "Waiting for a Godly Wife in a Godless Church Age",
+          summary: "In our current churches godly women are rare to find, and so are godly men.",
+          link: "godly_wife.html",
+          image: "patient.jpg",
+          alt: "Godly Spouses"
+        },
+        {
+          title: "Abominable Prayers",
+          summary: "Are your prayers abominable to God?",
+          link: "abomination.html",
+          image: "abominable.jpg",
+          alt: "Abominable Prayers"
+        },
+        {
+          title: "Even the Monkeys Knows It's Sabbath",
+          summary: "Who feeds you? God or your business...",
+          link: "monkey.html",
+          image: "sunset.png",
+          alt: "Sabbath Sunset"
+        },
+        {
+          title: "Using AI for the Final Gospel Call",
+          summary: "What if AI is the endtime gift from God to propel the everlasting gospel around the globe?",
+          link: "ai.html",
+          image: "ai.png",
+          alt: "AI and the Gospel"
+        },
+        {
+          title: `"It Is Too Late!” – The Tragic End of Judas Iscariot`,
+          summary: "Do you have elements of Judas Iscariot in you? Time to reconsider your christian walk.",
+          link: "Judas.html",
+          image: "judas.jpg",
+          alt: "Judas Iscariot"
+        },
+        {
+            title: "The First Sabbath Choir in the New Jerusalem",
+            summary: "Ever thought how Sabbath choir will look like while Christ is choristering? Let us open up our imaginations!",
+            link:"choir.html",
+            image: "choir.jpg",
+            alt: "Heavenly Choir"
+        },
+                {
+            title: "Where Is Thy Beautiful Flock",
+            summary: "Where are your children? A solemn question for the modern mothers.",
+            link:"little_flock.html",
+            image: "flock.png",
+            alt: "Mother and child holding hands."
+        },
+        
+        {
+            title: "Lessons From Cancer And The Fall Of Lucifer",
+            summary: "Cancer comes as a result of a rebellious cell that has refused regulations. Let's garner lessons here.",
+            link: "cancer.html",
+            image: "cancer.jpg",
+            alt: "Normal vs Cancer Cell"
+        },
+        {
+            title: "Are You Worshipping the True God of the Bible?",
+            summary: "Does your lifestyle reveal a sin hating God or a sin loving god you have created for yourself?",
+            link: "which_god.html",
+            image: "two_paths.png",
+            alt: "Two Paths"
+        }
+      ];
 
-    /* === Header === */
-    header {
-      background-color: #1c2e60;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
+      const listContainer = document.querySelector(".devotion-list");
+      const searchInput = document.getElementById("searchInput");
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    .verse-highlight {
-      background-color: #f4f0e6;
-      color: #1c2e60;
-      font-style: italic;
-      text-align: center;
-      padding: 10px 20px;
-      margin: 0;
-    }
-
-    /* === Main === */
-    main {
-      padding: 30px 15px;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      color: #1c2e60;
-    }
-
-    .search-box {
-      width: 90%;
-      padding: 10px;
-      margin: 20px auto;
-      display: block;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    /* === Devotion List === */
-    .devotion-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .devotion-item-link {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .devotion-item {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: #f9f9f9;
-      margin: 10px auto;
-      padding: 15px;
-      border-radius: 10px;
-      max-width: 900px;
-      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, background-color 0.2s ease;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .devotion-item:hover {
-      transform: scale(1.01);
-      background: #fffbe6;
-    }
-
-    .devotion-item img {
-      width: 90px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .devotion-text {
-      flex: 1;
-    }
-
-    .devotion-text h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .devotion-text p {
-      margin: 0;
-      font-size: 14px;
-      color: #555;
-    }
-
-    /* === Footer === */
-    footer {
-      background-color: #1c2e60;
-      color: #fff;
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
-
-    .footer-links a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: underline;
-    }
-
-    /* === Responsive === */
-    @media (max-width: 600px) {
-      .devotion-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+      function highlightText(text, searchValue) {
+        if (!searchValue) return text;
+        const regex = new RegExp(`(${searchValue})`, "gi");
+        return text.replace(regex, "<mark>$1</mark>");
       }
 
-      .devotion-item img {
-        width: 100%;
-        height: auto;
+      function renderArticles(list, searchValue = "") {
+        listContainer.innerHTML = "";
+        if (list.length === 0) {
+          listContainer.innerHTML = "<p>No matching articles found 🙁</p>";
+          return;
+        }
+
+        list.forEach(article => {
+          const articleLink = document.createElement("a");
+          articleLink.href = article.link;
+          articleLink.className = "devotion-item-link";
+
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "devotion-item";
+
+          const img = document.createElement("img");
+          img.src = article.image;
+          img.alt = article.alt;
+
+          const textDiv = document.createElement("div");
+          textDiv.className = "devotion-text";
+
+          const h3 = document.createElement("h3");
+          h3.innerHTML = highlightText(article.title, searchValue);
+
+          const p = document.createElement("p");
+          p.innerHTML = highlightText(article.summary, searchValue);
+
+          textDiv.appendChild(h3);
+          textDiv.appendChild(p);
+          itemDiv.appendChild(img);
+          itemDiv.appendChild(textDiv);
+          articleLink.appendChild(itemDiv);
+
+          listContainer.appendChild(articleLink);
+        });
       }
-    }
-    .devotion-item {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.4s ease forwards;
-}
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#scrollTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 20px;
-  z-index: 1000;
-  font-size: 22px;
-  border: none;
-  outline: none;
-  background-color: #444;
-  color: white;
-  cursor: pointer;
-  padding: 12px 16px;
-  border-radius: 50%;
-  display: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
-}
+      searchInput.addEventListener("input", () => {
+        const searchValue = searchInput.value.toLowerCase();
+        const filtered = articles.filter(article =>
+          article.title.toLowerCase().includes(searchValue) ||
+          article.summary.toLowerCase().includes(searchValue)
+        );
+        renderArticles(filtered, searchValue);
+      });
 
-#scrollTopBtn:hover {
-  background-color: #222;
-}
-  </style>
-</head>
-<body>
+      renderArticles(articles);
 
-  <header>
-    <h1>Second Advent Ministries</h1>
-    <p class="verse-highlight">"Sanctify them through Thy truth: Thy word is truth." — John 17:17</p>
-  </header>
-
-  <main>
-    <h2>Devotional Articles</h2>
-    <p style="margin-bottom: 25px;">
-      Be inspired, convicted, and drawn closer to Christ through these truth-filled devotionals, rooted in Scripture and the Spirit of Prophecy.
-    </p>
-
-    <input type="text" id="searchInput" placeholder="Search devotion titles..." class="search-box" />
-    <div class="devotion-list"></div>
-      <button id="scrollTopBtn" title="Go to top">↑</button>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Second Advent Ministries. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="devotionals.html">Devotion Home</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </footer>
-<script src="articles.js"></script>
-</body>
-</html>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.addEventListener("scroll", () => {
+        scrollTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+      });
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
