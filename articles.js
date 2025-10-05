@@ -189,6 +189,13 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "which_god.html",
             image: "two_paths.png",
             alt: "Two Paths"
+        },
+                {
+            title: "Miriam at the Gates — A New Jerusalem Meditation",
+            summary: "A narrative about Miriam and Daniel. Will you be inside the city or outside?",
+            link: "judgement.html",
+            image: "miriam.png",
+            alt: "Miriam at the gates of new Jerusalem"
         }
       ];
 
