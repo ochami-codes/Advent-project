@@ -196,6 +196,13 @@ document.addEventListener("DOMContentLoaded", () => {
             link: "judgement.html",
             image: "miriam.png",
             alt: "Miriam at the gates of new Jerusalem"
+        },
+                        {
+            title: "Left Behind",
+            summary: "At the second coming of Christ, how will it be when you realize that you are lost forever?",
+            link: "tragic.html",
+            image: "second.png",
+            alt: "Christ's second coming"
         }
       ];
 
